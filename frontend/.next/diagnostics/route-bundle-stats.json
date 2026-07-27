@@ -1,0 +1,37 @@
+[
+  {
+    "route": "/",
+    "firstLoadUncompressedJsBytes": 526740,
+    "firstLoadChunkPaths": [
+      ".next/static/chunks/158myu8e_yme3.js",
+      ".next/static/chunks/23eq7en6d27oh.js",
+      ".next/static/chunks/1jq4o6yq14o4c.js",
+      ".next/static/chunks/1de9myc15dqxx.js",
+      ".next/static/chunks/25o46h8mdjlrg.js",
+      ".next/static/chunks/turbopack-2quxopabd8wyd.js"
+    ]
+  },
+  {
+    "route": "/voice-training",
+    "firstLoadUncompressedJsBytes": 526740,
+    "firstLoadChunkPaths": [
+      ".next/static/chunks/158myu8e_yme3.js",
+      ".next/static/chunks/23eq7en6d27oh.js",
+      ".next/static/chunks/1jq4o6yq14o4c.js",
+      ".next/static/chunks/1de9myc15dqxx.js",
+      ".next/static/chunks/25o46h8mdjlrg.js",
+      ".next/static/chunks/turbopack-2quxopabd8wyd.js"
+    ]
+  },
+  {
+    "route": "/_not-found",
+    "firstLoadUncompressedJsBytes": 514526,
+    "firstLoadChunkPaths": [
+      ".next/static/chunks/158myu8e_yme3.js",
+      ".next/static/chunks/1jq4o6yq14o4c.js",
+      ".next/static/chunks/1de9myc15dqxx.js",
+      ".next/static/chunks/25o46h8mdjlrg.js",
+      ".next/static/chunks/turbopack-2quxopabd8wyd.js"
+    ]
+  }
+]
