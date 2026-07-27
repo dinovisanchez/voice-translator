@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { API_URL } from "../services/config";
 
 interface RecordingSummary {
   phraseIndex: number;
@@ -173,7 +174,7 @@ export function VoiceTraining() {
       uploadFormData.append("phrase_text", currentPhrase);
 
       console.log("Awaiting upload...");
-      const datasetResponse = await fetch("http://127.0.0.1:8000/voice-training/dataset", {
+      const datasetResponse = await fetch(`${API_URL}/voice-training/dataset`, {
         method: "POST",
         body: uploadFormData,
       });
@@ -195,7 +196,7 @@ export function VoiceTraining() {
       transcriptionFormData.append("audio", blob, "capture.wav");
 
       console.log("Awaiting transcription...");
-      const transcribeResponse = await fetch("http://127.0.0.1:8000/api/v1/transcribe", {
+      const transcribeResponse = await fetch(`${API_URL}/api/v1/transcribe`, {
         method: "POST",
         body: transcriptionFormData,
       });
@@ -215,7 +216,7 @@ export function VoiceTraining() {
       });
 
       console.log("Awaiting translation...");
-      const translateResponse = await fetch("http://127.0.0.1:8000/api/v1/translate", {
+      const translateResponse = await fetch(`${API_URL}/api/v1/translate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -239,7 +240,7 @@ export function VoiceTraining() {
         translatedText,
       });
 
-      const synthesizeResponse = await fetch("http://127.0.0.1:8000/api/v1/synthesize", {
+      const synthesizeResponse = await fetch(`${API_URL}/api/v1/synthesize`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: translatedText }),

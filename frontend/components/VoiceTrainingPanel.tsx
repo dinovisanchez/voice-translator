@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { API_URL } from "../services/config";
 
 interface VoiceTrainingPanelProps {
   onTrainingComplete?: (message: string) => void;
@@ -29,7 +30,7 @@ export function VoiceTrainingPanel({ onTrainingComplete }: VoiceTrainingPanelPro
     formData.append("profile_name", "default");
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/voice-training", {
+      const response = await fetch(`${API_URL}/voice-training`, {
         method: "POST",
         body: formData,
       });

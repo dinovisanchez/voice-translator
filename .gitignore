@@ -1,28 +1,20 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
 
 # Node
 node_modules/
 frontend/node_modules/
 
-# Next.js
+# Next
 .next/
 frontend/.next/
-
-# Python
-venv/
-.venv/
-__pycache__/
-*.pyc
-
-# Logs
-*.log
 
 # macOS
 .DS_Store
 
-# Variables de entorno
+# Variables
 .env
 .env.local
-
-# Archivos temporales
-*.tmp

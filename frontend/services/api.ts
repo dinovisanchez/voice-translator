@@ -1,4 +1,6 @@
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+import { API_URL } from "./config";
+
+const API_BASE_URL = API_URL;
 
 export async function translateText(text: string, sourceLang: string, targetLang: string) {
   const response = await fetch(`${API_BASE_URL}/translate`, {
