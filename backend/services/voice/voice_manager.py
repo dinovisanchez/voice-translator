@@ -4,10 +4,10 @@ import os
 from pathlib import Path
 from typing import Any
 
-from backend.services.voice.chatterbox import ChatterboxTTSEngine
-from backend.services.voice.f5tts import F5TTSEngine
-from backend.services.voice.kokoro import KokoroTTSEngine
-from backend.services.voice.tts_engine import TTSEngine
+from services.voice.chatterbox import ChatterboxTTSEngine
+from services.voice.f5tts import F5TTSEngine
+from services.voice.kokoro import KokoroTTSEngine
+from services.voice.tts_engine import TTSEngine
 
 
 class VoiceManager:

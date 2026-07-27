@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pyttsx3
 
-from backend.services.voice.tts_engine import TTSEngine
+from services.voice.tts_engine import TTSEngine
 
 
 class KokoroTTSEngine(TTSEngine):

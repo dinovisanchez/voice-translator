@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from backend.services.voice.tts_engine import TTSEngine
+from services.voice.tts_engine import TTSEngine
 
 
 class F5TTSEngine(TTSEngine):
