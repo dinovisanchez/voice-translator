@@ -27,6 +27,14 @@ app.add_middleware(
 )
 
 
+@app.get("/")
+def root():
+    return {
+        "status": "ok",
+        "message": "Voice Translator API"
+    }
+
+
 @app.get("/health")
 def health():
     return {
@@ -42,7 +50,7 @@ def save_dataset_sample(
     audio: UploadFile = File(...),
 ) -> dict[str, Any]:
 
-    dataset_dir = Path("backend/voice/datasets/default")
+    dataset_dir = Path("voice/datasets/default")
     dataset_dir.mkdir(parents=True, exist_ok=True)
 
     target_index = max(1, int(phrase_index))
@@ -61,7 +69,7 @@ def save_dataset_sample(
 
     if metadata_path.exists():
         try:
-            metadata = json.loads(metadata_path.read_text())
+            metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
         except Exception:
             pass
 
